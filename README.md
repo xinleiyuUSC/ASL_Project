@@ -14,7 +14,7 @@ There are a few files and folder inside of this github repo. Although, dataset i
 
 - Test set 3 is the high contrasted and shaped images sets made from test set 2.
 
-- Output folder contains part of plot diagrams and confusion matrixs. 
+- Output folder contains part of plot diagrams and confusion matrixs. Some CNN models are also stored here, described by the Readme within the folder.
 
 - ASL-CNN-test.py is a python script that loads a existing CNN model to test it. 
 
