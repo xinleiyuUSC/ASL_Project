@@ -10,15 +10,33 @@ In deep learning, convolutional Neural Networks (CNNs) have emerged as the leadi
 ## Contents
 There are a few files and folder inside of this github repo. Although, dataset is not required to list at here, we put our additional dataset here for reference. 
 
-- Input folder contains our self created data sets to test the deep learning models. Test set one is the original test sets. Test set two is the high contrasted and shaped images sets made from test set one.
+- Input folder contains our self created data sets to test the deep learning models. Test set 1 and 2 are two new test sets generated from Internet images.
+
+- Test set 3 is the high contrasted and shaped images sets made from test set 2.
 
 - Output folder contains part of plot diagrams and confusion matrixs. 
 
-- ASL-CNN-test.py
+- ASL-CNN-test.py is a python script that loads a existing CNN model to test it. 
 
-- ASL-CNN.py
+- ASL-CNN.py is a python script contains CNN architecture and also the training code. 
 
 - ResNet_ASL.py is a python script contains ResNet architecture deep learning mode with ResNet18 and ResNet34. 
+## Instruction of running ASL-CNN.py
+- Make sure you have all dependencies installed (PyTorch, Torchvision,...)
+
+- Open ASL-CNN.py in IDE (I used Spyder)
+
+- Change the following to the approriate file path of training set in your folder
+```
+Train_data_path="ASL/asl_alphabet_train/asl_alphabet_train"
+```
+- Change the following to the approriate file path of output location in your folder
+```
+plt.savefig('outputs/accuracy.png')
+plt.savefig('outputs/loss.png')
+torch.save(Model_1.state_dict(), 'outputs/model.pth')
+```
+- Run the code
 
 ## Instruction of running ResNet_ASL.py
 It's pretty straightforward to run the ResNet_ASL.py. Firstly, make sure we have installed PyTorch, NumPy, Seaborn, and etc. as they are imported in the python scripts.
