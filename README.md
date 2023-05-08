@@ -38,6 +38,26 @@ torch.save(Model_1.state_dict(), 'outputs/model.pth')
 ```
 - Run the code
 
+## Instruction of running ASL-CNN-test.py
+- Make sure you have all dependencies installed (PyTorch, Torchvision,...)
+
+- Open ASL-CNN-test.py in IDE (I used Spyder)
+
+- Change the following to the approriate file path of test set in your folder
+```
+test_filepath = "ASL/asl_alphabet_test/"
+test_filepath = "ASL/asl_alphabet_test/asl_alphabet_test/"
+```
+- Change the following to the approriate file extension of the images in your test set
+```
+label = folder_name.replace("_test.jpg","")
+```
+- Change the following to the approriate  file path of output files in your folder
+```
+Model_1.load_state_dict(torch.load('outputs/model.pth'))
+```
+- Run the code
+
 ## Instruction of running ResNet_ASL.py
 It's pretty straightforward to run the ResNet_ASL.py. Firstly, make sure we have installed PyTorch, NumPy, Seaborn, and etc. as they are imported in the python scripts.
 For the test sets, makesure you also include each class of image into a folder, such that "test_dataset/A/A_image". The defualt epochs is set to 10 and it will run ResNet34 model. To switch to Resnet16, simply uncomment the line of code, then it should work. 
