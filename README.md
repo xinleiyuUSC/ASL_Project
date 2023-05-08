@@ -13,9 +13,9 @@ In deep learning, convolutional Neural Networks (CNNs) have emerged as the leadi
 Instruction of running ResNet_ASL.py
 It's pretty straightforward to run the ResNet_ASL.py. Firstly, make sure we have installed PyTorch, NumPy, Seaborn, and etc. as they are imported in the python scripts.
 For the test sets, makesure you also include each class of image into a folder, such that "test_dataset/A/A_image". 
-'''shell
+```shell
 conda activate "your project name"
 
 python ResNet_ASL.py
 
-'''
+```
