@@ -6,11 +6,17 @@ Deep Learning for American Sign Language (ASL) recognition has gained significan
 
 In deep learning, convolutional Neural Networks (CNNs) have emerged as the leading approach in developing such models due to their ability to efficiently process and analyze visual data.
 
-/Datasets
-/CNN
-/ResNet
+- Input folder contains our self created data sets to test the deep learning models. Test set one is the original test sets. Test set two is the high contrasted and shaped images sets made from test set one.
 
-Instruction of running ResNet_ASL.py
+- Output folder contains part of plot diagrams and confusion matrixs. 
+
+- ASL-CNN-test.py
+
+- ASL-CNN.py
+
+- ResNet_ASL.py is a python script contains ResNet architecture deep learning mode with ResNet18 and ResNet34. 
+
+# Instruction of running ResNet_ASL.py
 It's pretty straightforward to run the ResNet_ASL.py. Firstly, make sure we have installed PyTorch, NumPy, Seaborn, and etc. as they are imported in the python scripts.
 For the test sets, makesure you also include each class of image into a folder, such that "test_dataset/A/A_image". 
 ```shell
