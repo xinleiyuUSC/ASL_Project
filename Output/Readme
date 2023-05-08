@@ -1,1 +1,18 @@
-CNN output
+CNN output 
+
+all of the models are 1M-2M in size
+
+Trial 0 (not shown in the report, use different kernel size)
+Model.pth
+accuracy.png 
+loss.png
+
+Trial 0.1 (not shown in the report, use different kernel size)
+accuracy2.png 
+loss2.png
+
+Trial 1 (2 conv layer, detail parameter see report)
+Model1.pth
+
+Trial 2 (2 conv layer, detail parameter see report)
+Model2.pth
