@@ -17,5 +17,5 @@ Model1.pth
 Trial 2 (4 conv layer, detail parameter see report)
 Model2.pth
 
-Trial 2 (4 conv layer, reduced learning rate, detail parameter see report)
+Trial 3 (4 conv layer, reduced learning rate, detail parameter see report)
 Model3.pth
