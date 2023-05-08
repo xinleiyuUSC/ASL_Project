@@ -19,3 +19,6 @@ Model2.pth
 
 Trial 3 (4 conv layer, reduced learning rate, detail parameter see report)
 Model3.pth
+
+Trial 4 (4 conv layer, no regulization, detail parameter see report)
+Model4.pth
