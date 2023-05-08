@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-S
+
 from tqdm import tqdm
 import os
 import numpy as np
@@ -22,7 +22,7 @@ class CustomCNN(nn.Module):
         super(CustomCNN, self).__init__()
         self.conv1 = nn.Conv2d(3, 16, 5)
         self.conv2 = nn.Conv2d(16, 32, 5)
-        self.conv3 = nn.Conv2d(32, 64, 3)
+        self.conv3 = nn.Conv2d(32, 64, 5)
         self.conv4 = nn.Conv2d(64, 128, 5)
 
         self.fc1 = nn.Linear(128, 256)
@@ -74,14 +74,15 @@ train_loader = DataLoader(train_data, batch_size=100, shuffle=True) #batch size 
 classes=train_loader.dataset.classes
 
 Model_1=CustomCNN()
+
 loss_function=nn.CrossEntropyLoss()
-optimizer=torch.optim.Adam(Model_1.parameters(),lr=0.001)
+optimizer=torch.optim.Adam(Model_1.parameters(),lr=0.001,weight_decay=0.0001)
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print("The device in use is {}".format(device))
-
+Model_1.to(device)
 
 train_loss , train_accuracy = [], []
-val_loss , val_accuracy = [], []
+val_loss , val_accuracy = [], []S
 
 Num=10
 for epoch in range(Num):

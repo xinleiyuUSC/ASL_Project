@@ -22,7 +22,7 @@ class CustomCNN(nn.Module):
         super(CustomCNN, self).__init__()
         self.conv1 = nn.Conv2d(3, 16, 5)
         self.conv2 = nn.Conv2d(16, 32, 5)
-        self.conv3 = nn.Conv2d(32, 64, 3)
+        self.conv3 = nn.Conv2d(32, 64, 5)
         self.conv4 = nn.Conv2d(64, 128, 5)
 
         self.fc1 = nn.Linear(128, 256)
@@ -64,6 +64,8 @@ test_labels.sort()
 device = "cuda" if torch.cuda.is_available() else "cpu"
 Model_1 =CustomCNN()
 Model_1.load_state_dict(torch.load('outputs/model.pth'))
+Model_1.to(device)
+
 pred_test=[]
 test_labels_list=[]
 with torch.no_grad():
